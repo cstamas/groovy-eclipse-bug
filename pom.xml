@@ -7,6 +7,7 @@
   <groupId>org.example</groupId>
   <artifactId>groovy-eclipse-bug</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>groovy-eclipse-bug</name>
   <!-- FIXME change it to the project's website -->
@@ -14,11 +15,16 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <maven.copiler.release>17</maven.copiler.release>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven.copiler.release>11</maven.copiler.release>
     <groovy.version>4.0.2</groovy.version>
   </properties>
+
+  <modules>
+    <module>support</module>
+    <module>impl</module>
+  </modules>
 
   <dependencies>
     <dependency>
@@ -31,7 +37,23 @@
       <artifactId>groovy-all</artifactId>
       <type>pom</type>
       <version>4.0.2</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.groovy</groupId>
+          <artifactId>groovy-testng</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.groovy</groupId>
+          <artifactId>groovy-test-junit5</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.10.12</version> <!-- keep in sync with groovy -->
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
