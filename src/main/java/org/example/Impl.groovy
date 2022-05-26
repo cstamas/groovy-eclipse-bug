@@ -5,9 +5,9 @@ import groovy.transform.ToString
 import org.apache.groovy.util.Maps
 
 @CompileStatic
-class ImplClass extends SupportClass<Inner>
+class Impl extends AppSupport<Inner>
 {
-    ImplClass()
+    Impl()
     {
         data = new Inner( Maps.of('prop', 'value') )
     }

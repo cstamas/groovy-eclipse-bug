@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class ImplClassTest
+public class ImplTest
 {
     /**
      * Rigorous Test :-)
@@ -13,7 +13,7 @@ public class ImplClassTest
     @Test
     public void doIt()
     {
-        ImplClass implClass = new ImplClass();
+        Impl implClass = new Impl();
         implClass.someMethod();
     }
 }
