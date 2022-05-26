@@ -10,6 +10,7 @@ class Impl extends AppSupport<Inner>
     Impl()
     {
         data = new Inner( Maps.of('prop', 'value') )
+        logger.info( "created" )
     }
 
     void someMethod()
@@ -17,7 +18,7 @@ class Impl extends AppSupport<Inner>
         println data.prop
     }
 
-    @ToString
+    @ToString(includePackage = false, includeNames = true)
     static class Inner extends DataSupport {
         String prop
 

@@ -1,15 +1,15 @@
 package org.example;
 
-public abstract class AppSupport<T> extends Support implements App
+public abstract class AppSupport<DataT> extends Support implements App
 {
-    private T data;
+    private DataT data;
 
-    public void setData( T data )
+    public void setData( DataT data )
     {
         this.data = data;
     }
 
-    public T getData()
+    public DataT getData()
     {
         return data;
     }
